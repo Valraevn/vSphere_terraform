@@ -21,5 +21,3 @@ Null Resource:
 null_resource: Used for triggers and local-exec provisioners. It depends on the completion of the VM creation and triggers a local command (in this case, echoing a message) when the VM is successfully created.
 
 The provided configuration creates a virtual machine in a vSphere environment with specified settings and triggers a local message when the VM is created.
-
-git clone https://github.com/valraevn/Vsphere_terraform
