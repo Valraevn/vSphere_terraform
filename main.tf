@@ -40,7 +40,7 @@ resource "vsphere_virtual_machine" "vm" {
   }
   cdrom {
     datastore_id = data.vsphere_datastore.datastore.id
-    path         = "https://ubuntu.com/download/desktop/thank-you?version=22.04.3&architecture=amd64"
+    path         = "https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.ova"
   }
 }
 # Add a null_resource to trigger the destruction of the VM
