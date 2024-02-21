@@ -6,7 +6,7 @@ provider "vsphere" {
 }
 
 data "vsphere_datacenter" "datacenter" {
-  name = "10.1.1.10"
+  name = "10.1.1.30"
 }
 
 data "vsphere_datastore" "datastore" {
@@ -15,7 +15,7 @@ data "vsphere_datastore" "datastore" {
 }
 
 data "vsphere_compute_cluster" "cluster" {
-  name          = "ESXi"
+  name          = "Host"
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
@@ -40,7 +40,7 @@ resource "vsphere_virtual_machine" "vm" {
   }
   cdrom {
     datastore_id = data.vsphere_datastore.datastore.id
-    path         = "isos/ubuntu-22.04-live-server-amd64.iso"
+    path         = "https://ubuntu.com/download/desktop/thank-you?version=22.04.3&architecture=amd64"
   }
 }
 # Add a null_resource to trigger the destruction of the VM
