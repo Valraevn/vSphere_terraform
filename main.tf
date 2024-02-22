@@ -6,7 +6,7 @@ provider "vsphere" {
 }
 
 data "vsphere_datacenter" "datacenter" {
-  name = "10.1.1.30"
+  name = "Datacenter"
 }
 
 data "vsphere_datastore" "datastore" {
