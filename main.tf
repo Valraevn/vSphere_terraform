@@ -40,7 +40,7 @@ resource "vsphere_virtual_machine" "vm" {
   }
   cdrom {
     datastore_id = data.vsphere_datastore.datastore.id
-    path         = "//10.1.1.2/isos/ubuntu.ova"
+    path         = "/datastore1/isos/ubuntu.ova"
   }
 }
 # Add a null_resource to trigger the destruction of the VM
