@@ -31,6 +31,7 @@ resource "vsphere_virtual_machine" "vm" {
   num_cpus         = 2
   memory           = 2048
   guest_id         = "ubuntu64Guest"
+  firmware           = "efi"
   wait_for_guest_net_timeout = 0
   wait_for_guest_ip_timeout  = 0
   network_interface {
