@@ -46,16 +46,3 @@ resource "vsphere_virtual_machine" "vm" {
     path         = "/datastore1/isos/ubuntu.ova"
   }
 }
-# Add a null_resource to trigger the destruction of the VM
-resource "null_resource" "destroy_vm" {
-  depends_on = [vsphere_virtual_machine.vm]
-
-  triggers = {
-    vm_id = vsphere_virtual_machine.vm.id
-  }
-
-  provisioner "local-exec" {
-    command = "echo 'VM destruction triggered'"
-    # You can add additional commands here if needed
-  }
-}
