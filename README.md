@@ -21,3 +21,8 @@ Null Resource:
 null_resource: Used for triggers and local-exec provisioners. It depends on the completion of the VM creation and triggers a local command (in this case, echoing a message) when the VM is successfully created.
 
 The provided configuration creates a virtual machine in a vSphere environment with specified settings and triggers a local message when the VM is created.
+
+Note: If installing ESXi on a P/E core setup add the following to the boot process:
+cpuUniformityHardCheckPanic=FALSE
+and then as a peraament change:
+esxcli system settings kernel set -s cpuUniformityHardCheckPanic -v FALSE
