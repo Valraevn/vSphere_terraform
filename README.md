@@ -24,5 +24,5 @@ The provided configuration creates a virtual machine in a vSphere environment wi
 
 Note: If installing ESXi on a P/E core setup add the following to the boot process:
 cpuUniformityHardCheckPanic=FALSE
-and then as a peraament change:
+and then as a permanent change:
 esxcli system settings kernel set -s cpuUniformityHardCheckPanic -v FALSE
