@@ -3,7 +3,7 @@ Using terraform with vSphere
 
 A Terraform configuration file that defines a set of resources for managing a VM in a vSphere environment. 
 
-The main.tf is where the action happens, 'terraform apply' will prompt for input according to the contents of variables.tf. 'terraform apply -var-file=creds.tfvars' will apply the contents of creds.tfvars to the prompts accordingly. You can also rename creds.tfvars to variables.auto.tfvars for terrafor to auto-apply these variables.
+The main.tf is where the action happens, 'terraform apply' will prompt for input according to the contents of variables.tf. 'terraform apply -var-file=creds.tfvars' will apply the contents of creds.tfvars to the prompts accordingly. You can also rename creds.tfvars to variables.auto.tfvars for terraform to auto-apply these variables.
 
 Provider Configuration:
 Specifies the vSphere provider with the necessary connection details such as user, password, and server.
