@@ -1,5 +1,3 @@
-vsphere_user     = "adminitrator@domain.name"
-vsphere_password = "admin"
+vsphere_user     = "administrator@domain.name"
+vsphere_password = "VMware1!"
 vsphere_server   = "<ip address>"
-smb_username = "your_smb_username"
-smb_password = "your_smb_password"
