@@ -31,5 +31,5 @@ cpuUniformityHardCheckPanic=FALSE
 and then as a permanent change run the following in shell: 
 esxcli system settings kernel set -s cpuUniformityHardCheckPanic -v FALSE
 
-if 13gen of higher also run this: 
+if 13gen or higher also run this: 
 esxcli system settings kernel set -s ignoreMsrFaults -v TRUE
